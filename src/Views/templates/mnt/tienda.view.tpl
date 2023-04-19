@@ -1,4 +1,4 @@
-<section clas="WWlist">
+<section>
     <div class="container">
 		<h1 class="text-center">Catálogo de Videojuegos</h1>
 		<br>
