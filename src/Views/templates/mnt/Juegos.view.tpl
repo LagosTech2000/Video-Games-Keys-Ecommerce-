@@ -1,4 +1,4 @@
-<section>
+<section clas="WWlist">
     <div class="container">
 		<h1 class="text-center">Catálogo de Videojuegos</h1>
 		<br>
@@ -9,7 +9,7 @@
 					<div class="card-img-top" style="background-size: cover;width:9cm;height:7cm;background-repeat: no-repeat; background-image: url('public/imgs/Caratulas/1517220600_493319_1531822535_portada_normal.jpg');" ></div>
 					<div class="card-body">
 						<h5 class="card-title">Rainbow Six Siege</h5>
-						<p class="card-text">$50.00</p>
+						<p class="card-text">$50.99</p>
 					</div>
 				</div>
 			</div>
@@ -17,8 +17,8 @@
 				<div class="card mb-4 shadow-sm">
 					<div class="card-img-top" style="background-size: cover ;width:9cm;height:7cm;background-repeat: no-repeat; background-image: url('public/imgs/Caratulas/grand-theft-auto-v-201342141558_1.jpg');" ></div>
 					<div class="card-body">
-						<h5 class="card-title">GTA V</h5>
-						<p class="card-text">$40.00</p>
+						<h5 class="card-title">Grand the Auto V</h5>
+						<p class="card-text">$49.99</p>
 					</div>
 				</div>
 			</div>
@@ -46,8 +46,8 @@
 				<div class="card mb-4 shadow-sm">
 					<div class="card-img-top" style="background-size: cover ;width:9cm;height:7cm;background-repeat: no-repeat; background-image: url('public/imgs/Caratulas/cal-lof-duty-modern-warfare-2-2022-portada-oficial.jpg');" ></div>
 					<div class="card-body">
-						<h5 class="card-title">COD: Modern Warfare 2 Remake</h5>
-						<p class="card-text">$60.00</p>
+						<h5 class="card-title">Call of Dutty: Modern Warfare 2 Remake</h5>
+						<p class="card-text">$70.99</p>
 					</div>
 				</div>
 			</div>
@@ -58,16 +58,6 @@
 					<div class="card-body">
 						<h5 class="card-title">FIFA 23</h5>
 						<p class="card-text">$45.00</p>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-md-4">
-				<div class="card mb-4 shadow-sm">
-					<div class="card-img-top" style="background-size: cover ;width:9cm;height:7cm;background-repeat: no-repeat; background-image: url('public/imgs/Caratulas/cover.forza-horizon-5.2100x2100.2021-08-24.28.jpg');" ></div>
-					<div class="card-body">
-						<h5 class="card-title">Forza Horizon 5</h5>
-						<p class="card-text">$35.00</p>
 					</div>
 				</div>
 			</div>
@@ -90,7 +80,17 @@
 						<p class="card-text">$60.00</p>
 					</div>
 				</div>
-			</div>			
+			</div>
+
+			<div class="col-md-4">
+				<div class="card mb-4 shadow-sm">
+					<div class="card-img-top" style="background-size: cover ;width:9cm;height:7cm;background-repeat: no-repeat; background-image: url('public/imgs/Caratulas/cover.forza-horizon-5.2100x2100.2021-08-24.28.jpg');" ></div>
+					<div class="card-body">
+						<h5 class="card-title">Forza Horizon 5</h5>
+						<p class="card-text">$35.00</p>
+					</div>
+				</div>
+			</div>
 
 			<div class="col-md-4">
 				<div class="card mb-4 shadow-sm">

@@ -6,14 +6,13 @@ use Controllers\PublicController;
 use Dao\Dao;
 use Views\Renderer;
 
-class Quotes extends PublicController{
+class Juegos extends PublicController{
 
     public function run() : void
     {
         $viewData = array();
-        $viewData["quotes"] = \Dao\Mnt\Quotes::getAllQuotes();
-
-        Renderer::render("mnt/quotes", $viewData);
+        
+        Renderer::render("mnt/Juegos", $viewData);
     }
 }
 
