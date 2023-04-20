@@ -102,6 +102,16 @@
 				</div>
 			</div>
 
+				<div class="col-md-4">
+				<div class="card mb-4 shadow-sm">
+					<div class="card-img-top" style="background-size: cover ;width:9cm;height:7cm;background-repeat: no-repeat; background-image: url('public/imgs/Caratulas/wwe-2k23-e1681789287684.jpeg');" ></div>
+					<div class="card-body">
+						<h5 class="card-title">WWE 2K23</h5>
+						<p class="card-text">$59.99</p>
+					</div>
+				</div>
+			</div>
+
 			<div class="col-md-4">
 				<div class="card mb-4 shadow-sm">
 					<div class="card-img-top" style="background-size: cover ;width:9cm;height:7cm;background-repeat: no-repeat; background-image: url('public/imgs/sincerely-media-qwTvPpZm_F0-unsplash.jpg');" >
