@@ -6,7 +6,7 @@ use Dao\Table;
 class Juegos extends Table{
  
     public static function getAllGames() {
-        $selectSql = "SELECT * from juegos inner join genero on genero.id = juegos.genero_id ORDER BY nombre;";
+        $selectSql = "SELECT * ,juegos.id as idJuego from juegos inner join genero on genero.id = juegos.genero_id ORDER BY nombre;";
         return self::obtenerRegistros($selectSql, array());
     }
 

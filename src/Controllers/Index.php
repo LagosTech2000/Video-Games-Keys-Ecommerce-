@@ -39,6 +39,9 @@ class Index extends PublicController
             $J['imagen'] = "data:image/jpg;base64," . base64_encode($J['imagen']);          
            $viewData["Juegos"][] = $J;
         }  
+
+        $viewData['logged']=\Utilities\Security::isLogged();
+        
         \Views\Renderer::render("index", $viewData);
     }
 }

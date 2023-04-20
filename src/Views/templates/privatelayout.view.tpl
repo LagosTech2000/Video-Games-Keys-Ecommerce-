@@ -41,10 +41,13 @@
       </ul>
     </nav>
     {{with login}}
-    <div class="bg-white " style="width: 1cm; ">
+    
 
-    <div class="card-img-top" style="background-size: cover ;width:1cm;height:1cm;background-repeat: no-repeat; background-image: url('public/imgs/Caratulas/shopping-cart_icon-icons.com_72552.png');" ></div>
-    </div>
+    <a href="index.php?page=mnt_carrito">
+
+    <div class="card-img-top" style="background-size: cover ;width:1cm;height:1cm;background-repeat: no-repeat; background-image: url('public/imgs/Caratulas/cart.png');" ></div>
+    </a>
+    
     <span class="username">{{userName}} <a href="index.php?page=sec_logout"><i class="fas fa-sign-out-alt"></i></a></span>
     {{endwith login}}
   </header>

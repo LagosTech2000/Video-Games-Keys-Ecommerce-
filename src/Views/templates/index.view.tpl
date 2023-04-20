@@ -16,7 +16,14 @@
 						<h5 class="card-text">$ {{precio}}</h5>
 						<h5 class="card-text">{{publisher}}</h5>
 						<h5 class="card-text">Genero: {{genero}}</h5>
-						<div onclick="alert('agregar carrito')" class="fw-bold fs-5 card-img-top" style="background-size: cover ;width:1cm;height:1cm;background-repeat: no-repeat; background-image: url('public/imgs/Caratulas/shopping-cart_icon-icons.com_72552.png');" >+</div>
+						
+						{{if ~logged}}
+						<a href="index.php?page=mnt_Addcarrito&id={{idJuego}}">
+						<div class="fw-bold fs-5 card-img-top" style="background-size: cover ;width:1cm;height:1cm;background-repeat: no-repeat; background-image: url('public/imgs/Caratulas/shopping-cart_icon-icons.com_72552.png');" ></div>
+						</a>
+						{{endif ~logged}}
+
+						
 					</div>
 				</div>
 			</div>

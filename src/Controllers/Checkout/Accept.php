@@ -12,6 +12,8 @@ class Accept extends PublicController{
         if ($token !== "" && $token == $session_token) {
             $result = \Utilities\Paypal\PayPalCapture::captureOrder($session_token);
             $dataview["orderjson"] = json_encode($result, JSON_PRETTY_PRINT);
+
+            //eliminar los items del carrito
         } else {
             $dataview["orderjson"] = "No Order Available!!!";
         }
