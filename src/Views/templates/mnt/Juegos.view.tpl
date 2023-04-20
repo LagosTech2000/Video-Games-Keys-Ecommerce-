@@ -37,7 +37,7 @@
 					<div class="card-img-top" style="background-size: cover ;width:9cm;height:7cm;background-repeat: no-repeat; background-image: url('public/imgs/Caratulas/assassins-creed-valhalla-pc-playstation-5-ps4-xbox-one-xbox-series-x_334306-1024x590.jpg');" ></div>
 					<div class="card-body">
 						<h5 class="card-title">AC: Valhalla</h5>
-						<p class="card-text">$69.00</p>
+						<p class="card-text">$45.00</p>
 					</div>
 				</div>
 			</div>
