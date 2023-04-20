@@ -1004,7 +1004,7 @@ header ul li span {
 }
 
 header ul li a:hover {
-    background-color: #8eacbb;
+    background-color: #2a3322;
     transition: background-color .5s ease
 }
 
@@ -1081,7 +1081,7 @@ textarea,
 select {
     font-size: 1rem;
     padding: .75rem .5rem;
-    border: 1px solid #8eacbb;
+    border: 1px solid #2a3322;
     outline-style: none;
     margin: 0px
 }
@@ -1101,9 +1101,9 @@ input.width-full {
 }
 
 button {
-    background-color: #8eacbb;
+    background-color: #2a3322;
     color: white;
-    border: solid 2px #8eacbb;
+    border: solid 2px #2a3322;
     padding: 0.75rem;
     font-size: 1rem;
     font-weight: 700;
@@ -1172,7 +1172,7 @@ table a.btn:hover {
 }
 
 .WWList table thead {
-    background-color: #8eacbb;
+    background-color: #2a3322;
     color: white
 }
 

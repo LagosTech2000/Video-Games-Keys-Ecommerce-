@@ -64,16 +64,6 @@
 
 			<div class="col-md-4">
 				<div class="card mb-4 shadow-sm">
-					<div class="card-img-top" style="background-size: cover ;width:9cm;height:7cm;background-repeat: no-repeat; background-image: url('public/imgs/Caratulas/cover.forza-horizon-5.2100x2100.2021-08-24.28.jpg');" ></div>
-					<div class="card-body">
-						<h5 class="card-title">Forza Horizon 5</h5>
-						<p class="card-text">$35.00</p>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-md-4">
-				<div class="card mb-4 shadow-sm">
 					<div class="card-img-top" style="background-size: cover ;width:9cm;height:7cm;background-repeat: no-repeat; background-image: url('public/imgs/Caratulas/outlast_2-3702156.webp');" ></div>
 					<div class="card-body">
 						<h5 class="card-title">Outlast 2</h5>
