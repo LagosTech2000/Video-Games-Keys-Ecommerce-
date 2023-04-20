@@ -1,4 +1,4 @@
-{{foreach productos}}
+{{foreach Productos}}
   <div>
     <h3>{{nombre}}</h3>
     <p>{{precio}}</p>
@@ -10,4 +10,4 @@
       <a href="/carts/{{id}}/add">Add to cart</a>
     {{endifnot enCarretilla}}
   </div>
-{{endfor productos}}
+{{endfor Productos}}

@@ -3,7 +3,7 @@
 		<h1 class="text-center">Carrito de {{username}}</h1>
 
 		<br>
-		<h2class="text-center">Total Pedido: {{totalP}} $</h2>
+		<h2class="text-center">Total del Pedido: {{totalP}} $</h2>
 		<br>
 		<button>Facturar</button>
 		<br>
