@@ -9,7 +9,11 @@
 					<div class="card-img-top" style="background-size: cover;width:9cm;height:7cm;background-repeat: no-repeat; background-image: url('public/imgs/Caratulas/1517220600_493319_1531822535_portada_normal.jpg');" ></div>
 					<div class="card-body">
 						<h5 class="card-title">Rainbow Six Siege</h5>
+<<<<<<< Updated upstream
 						<p class="card-text">$30.00</p>
+=======
+						<p class="card-text">$50.00</p>
+>>>>>>> Stashed changes
 					</div>
 				</div>
 			</div>
@@ -18,7 +22,11 @@
 					<div class="card-img-top" style="background-size: cover ;width:9cm;height:7cm;background-repeat: no-repeat; background-image: url('public/imgs/Caratulas/grand-theft-auto-v-201342141558_1.jpg');" ></div>
 					<div class="card-body">
 						<h5 class="card-title">GTA V</h5>
+<<<<<<< Updated upstream
 						<p class="card-text">$25.00</p>
+=======
+						<p class="card-text">$40.00</p>
+>>>>>>> Stashed changes
 					</div>
 				</div>
 			</div>
@@ -27,7 +35,11 @@
 					<div class="card-img-top" style="background-size: cover ;width:9cm;height:7cm;background-repeat: no-repeat; background-image: url('public/imgs/Caratulas/Hogwarts-Legacy-Key-Art.jpg');" ></div>
 					<div class="card-body">
 						<h5 class="card-title">Hogwarts Legacy</h5>
+<<<<<<< Updated upstream
 						<p class="card-text">$70.00</p>
+=======
+						<p class="card-text">$45.00</p>
+>>>>>>> Stashed changes
 					</div>
 				</div>
 			</div>
@@ -37,7 +49,11 @@
 					<div class="card-img-top" style="background-size: cover ;width:9cm;height:7cm;background-repeat: no-repeat; background-image: url('public/imgs/Caratulas/assassins-creed-valhalla-pc-playstation-5-ps4-xbox-one-xbox-series-x_334306-1024x590.jpg');" ></div>
 					<div class="card-body">
 						<h5 class="card-title">AC: Valhalla</h5>
+<<<<<<< Updated upstream
 						<p class="card-text">$50.00</p>
+=======
+						<p class="card-text">$45.00</p>
+>>>>>>> Stashed changes
 					</div>
 				</div>
 			</div>
@@ -56,8 +72,13 @@
 				<div class="card mb-4 shadow-sm">
 					<div class="card-img-top" style="background-size: cover ;width:9cm;height:7cm;background-repeat: no-repeat; background-image: url('public/imgs/Caratulas/fifa_23-5756986.webp');" ></div>
 					<div class="card-body">
+<<<<<<< Updated upstream
 						<h5 class="card-title">FIFA 2023</h5>
 						<p class="card-text">$60.00</p>
+=======
+						<h5 class="card-title">FIFA 23</h5>
+						<p class="card-text">$45.00</p>
+>>>>>>> Stashed changes
 					</div>
 				</div>
 			</div>
@@ -77,7 +98,11 @@
 					<div class="card-img-top" style="background-size: cover ;width:9cm;height:7cm;background-repeat: no-repeat; background-image: url('public/imgs/Caratulas/demo-de-Resident-Evil-4-Remake-portada.jpg');" ></div>
 					<div class="card-body">
 						<h5 class="card-title">Residen Evil 4 Remake</h5>
+<<<<<<< Updated upstream
 						<p class="card-text">$70.00</p>
+=======
+						<p class="card-text">$60.00</p>
+>>>>>>> Stashed changes
 					</div>
 				</div>
 			</div>
@@ -87,7 +112,11 @@
 					<div class="card-img-top" style="background-size: cover ;width:9cm;height:7cm;background-repeat: no-repeat; background-image: url('public/imgs/Caratulas/cover.forza-horizon-5.2100x2100.2021-08-24.28.jpg');" ></div>
 					<div class="card-body">
 						<h5 class="card-title">Forza Horizon 5</h5>
+<<<<<<< Updated upstream
 						<p class="card-text">$60.00</p>
+=======
+						<p class="card-text">$35.00</p>
+>>>>>>> Stashed changes
 					</div>
 				</div>
 			</div>
