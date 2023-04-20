@@ -28,7 +28,9 @@
       <div class="hmb hrz"></div>
       <div class="hmb dgn pt-2"></div>
     </label>
-    <h1>{{SITE_TITLE}}</h1>
+    <a style="text-decoration:none;" href="index.php">
+    <h1 class="text-white fw-2 fs-2">{{SITE_TITLE}}</h1>
+    </a>
     <nav id="menu">
       <ul>
         <li><a href="index.php"><i class="fas fa-home"></i>&nbsp;Inicio</a></li>

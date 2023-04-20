@@ -3,19 +3,31 @@
 		<h1 class="text-center">Carrito de {{username}}</h1>
 
 		<br>
-		<h2class="text-center">Total Pedido: {{totalP}} $ </h2>
+		<h2 class="text-center">Articulos: {{cuenta}} </h2>
 		<br>
-		<a href="index.php?page=mnt_facturar">
-		<button>Facturar</button>
+		{{if ~novacio}}
+		<a style="text-decoration: none;" href="index.php?page=mnt_facturar">
+			<button>Facturar</button>&nbsp;
+		</a>
+
+		<a style="text-decoration: none;" href="index.php?page=mnt_vaciarcarrito">
+		
+		<button>Vaciar Carrito</button>&nbsp;
+
+		</a>
+		{{endif ~novacio}}
+
+		<a href="index.php?page=mnt_historial">
+			<button>Historial</button>
 
 		</a>
 		<br>
 		<br>
-		<div class="row">	
+		<div class="row">
 			{{if vacio}}
 			<center>
 
-			<h1>Carrito Vacio</h1>
+				<h1>Carrito Vacio</h1>
 			</center>
 			{{endif vacio}}
 
@@ -30,13 +42,17 @@
 						<h5 class="card-text">$ {{precio}}</h5>
 						<h5 class="card-text">{{publisher}}</h5>
 						<h5 class="card-text">Genero: {{genero}}</h5>
-						
-						<a style="text-decoration: none;" href="index.php?page=mnt_Delcarrito&id={{idCarrito}}"><div class="text-dark fw-bold fs-5 card-img-top" style="background-size: cover ;width:1cm;height:1cm;background-repeat: no-repeat; background-image: url('public/imgs/Caratulas/shopping-cart_icon-icons.com_72552.png'););" >-</div></a>
+
+						<a style="text-decoration: none;" href="index.php?page=mnt_Delcarrito&id={{idCarrito}}">
+							<div class="text-dark fw-bold fs-5 card-img-top"
+								style="background-size: cover ;width:1cm;height:1cm;background-repeat: no-repeat; background-image: url('public/imgs/Caratulas/shopping-cart_icon-icons.com_72552.png'););">
+								-</div>
+						</a>
 					</div>
 				</div>
 			</div>
 			{{endfor carrito}}
-			
+
 
 
 		</div>

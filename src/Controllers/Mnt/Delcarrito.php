@@ -23,17 +23,24 @@ class Delcarrito extends PublicController{
             "new_enabled"=>true,
             "edit_enabled"=>true,
             "delete_enabled"=>true,            
-            'username'=>$userName
+            'username'=>$userName,
+            'totalP'=>0
         );        
 
         foreach($carrito as $C){
             $C['imagen64'] = "data:image/jpg;base64," . base64_encode($C['imagen']);          
             $viewData["carrito"][] = $C;
+            $viewData["totalP"] +=$C['precio'];
         } 
 
         if(count($carrito)==0){
-              $viewData['vacio']=true;
-        }
+            $viewData['vacio']=true;
+            
+      }else{
+          $viewData['cuenta']=count($carrito);
+          $viewData['novacio']=true;
+          
+      }
 
         Renderer::render("mnt/carrito", $viewData);
     }

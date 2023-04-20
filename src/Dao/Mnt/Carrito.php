@@ -39,6 +39,20 @@ class Carrito extends Table{
         
 
     }
+
+
+    public static function limpiarCarrito(int $id){
+
+        $sqlstr = "delete from carrito where usercod = :id";
+
+         self::executeNonQuery(
+            $sqlstr,
+            array('id'=>$id)
+        );
+        
+
+    }
+    
     
 }
 
