@@ -37,7 +37,7 @@ class Index extends PublicController
         
         foreach($Juegos as $J){
             $J['imagen'] = "data:image/jpg;base64," . base64_encode($J['imagen']);          
-           $viewData["Juegos"][] = $J;
+            $viewData["Juegos"][] = $J;
         }  
 
         $viewData['logged']=\Utilities\Security::isLogged();
