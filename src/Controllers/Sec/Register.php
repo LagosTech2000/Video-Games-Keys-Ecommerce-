@@ -38,7 +38,7 @@ class Register extends PublicController
                     
                     if (\Dao\Security\Security::newUsuario($this->txtEmail, $this->txtPswd,$this->username)) {
                         $this->userId = Seguridad::getUsuarioByEmail($this->txtEmail);
-                        // Seguridad::createRol($this->userId["usercod"]);
+                         Seguridad::createRol($this->userId["usercod"]);
                         \Utilities\Site::redirectToWithMsg("index.php?page=sec_login", "¡Usuario Registrado Satisfactoriamente!");
                     }
                 } catch (Exception $ex){

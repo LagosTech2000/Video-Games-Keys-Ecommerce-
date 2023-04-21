@@ -12,8 +12,11 @@ class Addcarrito extends PublicController{
     {
         
         $userId = \Utilities\Security::getUserId();
+        
         $idJuego=$_GET['id'];        
+
         \Dao\Mnt\Carrito::addCarrito($idJuego,$userId);
+
         $carrito = \Dao\Mnt\Carrito::getCarrito($userId);
         
         $userName = \utilities\Security::getUser()['userName'];
