@@ -30,6 +30,18 @@ class Index extends PublicController
     public function run() :void
     {
         $viewData = array();
+
+        $Juegos = \Dao\Mnt\Juegos::getAllGames();
+
+        $viewData["Juegos"] = array();
+        
+        foreach($Juegos as $J){
+            $J['imagen'] = "data:image/jpg;base64," . base64_encode($J['imagen']);          
+           $viewData["Juegos"][] = $J;
+        }  
+
+        $viewData['logged']=\Utilities\Security::isLogged();
+        
         \Views\Renderer::render("index", $viewData);
     }
 }

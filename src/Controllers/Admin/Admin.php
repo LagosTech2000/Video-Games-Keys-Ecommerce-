@@ -11,6 +11,8 @@
  * @link     http://
  */
 namespace Controllers\Admin;
+use \Dao\Mnt\Juegos as DaoJuegos;
+
 
 /**
  * Página Principal de Administradores
@@ -28,10 +30,11 @@ class Admin extends \Controllers\PrivateController
      */
     public function __construct()
     {
-        // $userInRole = \Utilities\Security::isInRol(
-        //     \Utilities\Security::getUserId(),
-        //     "ADMIN"
-        // );
+         \Utilities\Security::isInRol(
+            \Utilities\Security::getUserId(),
+            "ADMIN"
+        );
+        
         parent::__construct();
     }
     /** 
@@ -39,7 +42,15 @@ class Admin extends \Controllers\PrivateController
      */
     public function run() :void
     {
-        \Views\Renderer::render("admin/admin", array());
+
+        $viewData = array(
+            "new_enabled"=>true,
+            "edit_enabled"=>true,
+            "delete_enabled"=>true,
+            'juegos'=>DaoJuegos::getAllGames()
+        );  
+
+        \Views\Renderer::render("admin/admin", $viewData);
     }
 }
 ?>
