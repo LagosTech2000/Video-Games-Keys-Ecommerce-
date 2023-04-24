@@ -22,13 +22,16 @@ class Accept extends PublicController{
             $carrito = \Dao\Mnt\Carrito::getCarrito($userid);
 
             foreach($carrito as $c){
-                 \Dao\Mnt\Historial::insert($c['usercod'],$c['juegos_id']);
+                 \Dao\Mnt\Historial::insert($c['usercod'],$c['juegos_id'],$c['cantidad']);
             }
 
             
             foreach($carrito as $c){
                  $c['imagen'] = "data:image/jpg;base64," . base64_encode($c['imagen']);                          
-                 $c['llave'] = md5("Key".rand(500, 999));                           
+                 for($i = 1;$i<=$c['cantidad'];$i++){
+                     $c['llave'][$i] = md5("Key".rand(500, 999));                           
+
+                    }
                  $dataview["keys"][] = $c;  
 
              }            
@@ -39,6 +42,7 @@ class Accept extends PublicController{
         } else {
             $dataview["orderjson"] = "No Order Available!!!";
         }
+        
         \Views\Renderer::render("paypal/accept", $dataview);
     }
 }

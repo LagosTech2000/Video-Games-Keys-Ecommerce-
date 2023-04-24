@@ -5,7 +5,11 @@
 {{foreach keys}}
   <div class="fw-bold fs-5 card-img-top" style="background-size: cover ;width:1cm;height:1cm;background-repeat: no-repeat; background-image: url('{{imagen}}');" ></div>
   <p>Juego: {{nombre}}</p>
-  <p>Llave: {{llave}}</p>
+
+  <p>Llaves :</p>
+  {{foreach llave}}
+  <p> {{this}} </p>
+  {{endfor llave}}
   
 {{endfor keys}}
 <hr />

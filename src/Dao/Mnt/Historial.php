@@ -5,15 +5,16 @@ use Dao\Table;
 
 class Historial extends Table{
  
-    public static function insert(int $idusuario,int $idjuego){
+    public static function insert(int $idusuario,int $idjuego,int $cantidad){
 
-        $sqlstr = "insert into ventas (idUsuario,idJuego ,created_at) values (:idusuario, :idjuego, now());";
+        $sqlstr = "insert into ventas (idUsuario,idJuego,created_at,cantidad) values (:idusuario, :idjuego, now(), :cantidad);";
 
         $row = self::obtenerRegistros(
             $sqlstr,
             array(                
                 "idusuario"=> $idusuario,
-                "idjuego"=> $idjuego
+                "idjuego"=> $idjuego,
+                "cantidad"=> $cantidad
             )
         );        
         return $row;

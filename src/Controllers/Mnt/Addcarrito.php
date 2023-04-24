@@ -17,33 +17,21 @@ class Addcarrito extends PublicController{
 
         \Dao\Mnt\Carrito::addCarrito($idJuego,$userId);
 
-        $carrito = \Dao\Mnt\Carrito::getCarrito($userId);
+        $viewData = array();
+
+        $Juegos = \Dao\Mnt\Juegos::getAllGames();
+
+        $viewData["Juegos"] = array();
         
-        $userName = \utilities\Security::getUser()['userName'];
+        foreach($Juegos as $J){
+            $J['imagen'] = "data:image/jpg;base64," . base64_encode($J['imagen']);          
+            $viewData["Juegos"][] = $J;
+        }  
+
+        $viewData['logged']=\Utilities\Security::isLogged();
         
-        $viewData = array(
-            "new_enabled"=>true,
-            "edit_enabled"=>true,
-            "delete_enabled"=>true,            
-            'username'=>$userName,
-            'totalP'=>0
-        );        
-
-        foreach($carrito as $C){
-            $C['imagen64'] = "data:image/jpg;base64," . base64_encode($C['imagen']);          
-            $viewData["carrito"][] = $C;
-            $viewData["totalP"] +=$C['precio'];
-        } 
-
-        if(count($carrito)==0){
-              $viewData['vacio']=true;
-        }else{
-            $viewData['cuenta']=count($carrito);
-            $viewData['novacio']=true;
-        }
-
-        Renderer::render("mnt/carrito", $viewData);
-    }
+        \Views\Renderer::render("index", $viewData);
+}
 }
 
 ?>

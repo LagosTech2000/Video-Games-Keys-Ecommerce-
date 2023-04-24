@@ -2,6 +2,7 @@
 namespace Dao\Mnt;
 
 use Dao\Table;
+use mysqli;
 
 class Carrito extends Table{
  
@@ -17,15 +18,42 @@ class Carrito extends Table{
         return $row;
     }
 
-    public static function addCarrito(int $id_juego,$id_user){
+    public static function addCarrito(int $id_juego,$usercod){
 
-        $sqlstr = "insert into carrito (juegos_id,usercod) values (:id_juego,:id_user);";
+            $carrito=\Dao\Mnt\Carrito::getCarrito($usercod);
+            $cantidad=1;
 
-         self::executeNonQuery(
-            $sqlstr,
-            array('id_juego'=>$id_juego, 'id_user'=>$id_user)
-        );
+            foreach($carrito as $c){
+                
+                if($c['juegos_id']==$id_juego){
+                       $cantidad = $c['cantidad'] + 1 ;
+                }
 
+            }
+
+            
+
+
+             if($cantidad==1){
+
+                 $sqlstr = "insert into carrito (juegos_id,usercod,cantidad) values (:id_juego,:id_user,:cantidad);";
+                 
+                 self::executeNonQuery(
+                     $sqlstr,
+                     array('id_juego'=>$id_juego, 'id_user'=>$usercod,'cantidad'=>$cantidad)
+                    );
+                    
+                }else{
+
+                    $sqlstr = "update carrito set cantidad = :cantidad where usercod=:usercod and juegos_id = :id_juego;";
+                 
+                    self::executeNonQuery(
+                        $sqlstr,
+                        array('id_juego'=>$id_juego, 'usercod'=>$usercod,'cantidad'=>$cantidad)
+                       );
+
+                }
+    
     }
 
     public static function delCarrito(int $id){
@@ -55,7 +83,3 @@ class Carrito extends Table{
     
     
 }
-
-
-
-?>

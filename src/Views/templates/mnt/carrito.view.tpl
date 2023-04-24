@@ -3,9 +3,9 @@
 		<h1 class="text-center">Carrito de {{username}}</h1>
 
 		<br>
-		<h2 class="text-center">Articulos: {{cuenta}} </h2>
 		<br>
 		{{if ~novacio}}
+		<h2 class="text-center">Articulos: {{cuenta}} </h2>
 		<a style="text-decoration: none;" href="index.php?page=mnt_facturar">
 			<button>Facturar</button>&nbsp;
 		</a>
@@ -38,7 +38,8 @@
 						style="background-size: cover ;width:9cm;height:7cm;background-repeat: no-repeat; background-image: url('{{imagen64}}');">
 					</div>
 					<div class="card-body">
-						<h4 class="card-title">{{nombre}}</h4>
+						<h4 class="card-title">{{nombre}} </h4>
+						<h4 class="card-title">x{{cantidad}} </h4>
 						<h5 class="card-text">$ {{precio}}</h5>
 						<h5 class="card-text">{{publisher}}</h5>
 						<h5 class="card-text">Genero: {{genero}}</h5>

@@ -18,7 +18,7 @@ class Checkout extends PublicController{
              $carrito = \Dao\Mnt\Carrito::getCarrito($userid);
 
              foreach($carrito as $c){
-                 $PayPalOrder->addItem($c['nombre'], $c['descripcion'], "GPRD".$c['idJuego'], $c['precio'], 2.7, 1, "DIGITAL_GOODS");//pasar cada item a la orden
+                 $PayPalOrder->addItem($c['nombre'], $c['descripcion'], "GPRD".$c['juegos_id'], $c['precio'], 2.7, $c['cantidad'], "DIGITAL_GOODS");//pasar cada item a la orden
              }
            
              

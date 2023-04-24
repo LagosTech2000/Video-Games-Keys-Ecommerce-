@@ -25,7 +25,7 @@ class Facturar extends PublicController{
         foreach($carrito as $C){
             $C['imagen64'] = "data:image/jpg;base64," . base64_encode($C['imagen']);          
             $viewData["carrito"][] = $C;    
-            $viewData["totalP"] +=$C['precio'];
+            $viewData["totalP"] +=$C['precio'] * $C['cantidad'];            
         } 
 
         if(count($carrito)==0){

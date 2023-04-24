@@ -12,7 +12,7 @@ class Carrito extends PublicController{
     {
         $userId = \Utilities\Security::getUserId();
         $userName = \utilities\Security::getUser()['userName'];
-
+        $cantidad=0; 
         
         $carrito = \Dao\Mnt\Carrito::getCarrito($userId);
         $viewData = array(
@@ -26,13 +26,15 @@ class Carrito extends PublicController{
         foreach($carrito as $C){
             $C['imagen64'] = "data:image/jpg;base64," . base64_encode($C['imagen']);          
             $viewData["carrito"][] = $C;    
-            $viewData["totalP"] +=$C['precio'];
+            $viewData["totalP"] +=$C['precio'] * $C['cantidad'];            
+            $cantidad += $C['cantidad'];
         } 
+
 
         if(count($carrito)==0){
             $viewData['vacio']=true;
       }else{
-          $viewData['cuenta']=count($carrito);
+          $viewData['cuenta']=$cantidad;
           $viewData['novacio']=true;
       }
 

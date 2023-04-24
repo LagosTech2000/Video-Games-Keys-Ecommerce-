@@ -22,6 +22,7 @@
 					</div>
 					<div class="card-body">
 						<h4 class="card-title">{{nombre}}</h4>
+						<h4 class="card-title">x{{cantidad}}</h4>
 						<h5 class="card-text">$ {{precio}}</h5>
 						<h5 class="card-text">{{publisher}}</h5>
 						<h5 class="card-text">Genero: {{genero}}</h5>
