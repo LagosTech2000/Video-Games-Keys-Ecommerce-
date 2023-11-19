@@ -20,10 +20,15 @@ class Historial extends PublicController{
         );        
 
         foreach($historial as $C){
-            $C['imagen64'] = "data:image/jpg;base64," . base64_encode($C['imagen']);          
+            $C['imagen64'] = "data:image/jpg;base64," . base64_encode($C['imagen']);                    
+            $C["totalP"] =$C['precio'] * $C['cantidad'];                              
+            $viewData["totalP"] += round($C['precio'] * $C['cantidad'],2);  
             $viewData["historial"][] = $C;    
-            $viewData["totalP"] +=$C['precio'];
-        } 
+            
+        }         
+
+        $viewData['ISV']=round($viewData['totalP']*0.15,2);
+        $viewData['totalP'] -= $viewData['ISV'];
          
         Renderer::render("mnt/historial", $viewData);
     }

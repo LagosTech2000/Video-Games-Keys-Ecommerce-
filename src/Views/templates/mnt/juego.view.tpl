@@ -1,84 +1,86 @@
 <h1>{{mode_dsc}}</h1>
-<section>
+<section class="text-center container">
   <form action="index.php?page=mnt_juego&mode={{mode}}&id={{id}}" method="POST" enctype="multipart/form-data">
-    <section>
-      <label for="id">Código</label><br>
+    <section class="mb-3">
+      <label for="id" class="form-label">Código</label><br>
       <input type="hidden" id="id" name="id" value="{{id}}" />
-      <input type="hidden" id="mode" name="mode" value="{{mode}}"/> 
-    <input type="hidden"  name="xssToken" value="{{xssToken}}"/>
-      <input type="text" readonly name="iddummy" value="{{id}}" />
+      <input type="hidden" id="mode" name="mode" value="{{mode}}" />
+      <input type="hidden" name="xssToken" value="{{xssToken}}" />
+      <input type="number" readonly name="iddummy" value="{{id}}" class="form-control text-center" />
     </section>
-    <section>
-      <label for="nombre">Nombre</label><br>
-      <input type="text" {{readonly}} name="nombre" value="{{nombre}}" maxlength="45" placeholder="Juego" />
+    <section class="mb-3">
+      <label for="nombre" class="form-label">Nombre</label><br>
+      <input type="text" {{readonly}} name="nombre" value="{{nombre}}" maxlength="45" placeholder="Juego"
+        class="form-control text-center" />
     </section>
-    <section>
-      <label for="catest">Descripcion</label><br>
+    <section class="mb-3">
+      <label for="catest" class="form-label">Descripcion</label><br>
       <input type="text" {{readonly}} name="descripcion" value="{{descripcion}}" maxlength="45"
-        placeholder="Descripcion" />
-
+        placeholder="Descripcion" class="form-control text-center" />
     </section>
 
-    <section>
-      <label for="catest">Fecha lanzamiento</label><br>
+    <section class="mb-3">
+      <label for="catest" class="form-label">Fecha lanzamiento</label><br>
       <input type="date" {{readonly}} name="released_date" value="{{released_date}}" maxlength="45"
-        placeholder="Descripcion" />
+        placeholder="Descripcion" class="form-control text-center" />
 
     </section>
 
-    <section>
-      <label>Publicadora</label><br>
-      <input type="text" {{readonly}} name="publisher" value="{{publisher}}" maxlength="45" placeholder="Publicadora" />
+    <section class="mb-3">
+      <label class="form-label">Publicadora</label><br>
+      <input type="text" {{readonly}} name="publisher" value="{{publisher}}" maxlength="45"
+        placeholder="Publicadora" class="form-control text-center" />
 
     </section>
 
-    <section>
-      <label for="">Precio</label><br>
-      <input type="text" {{readonly}} name="precio" value="{{precio}}" maxlength="45" placeholder="Descripcion" />
+    <section class="mb-3">
+      <label for="" class="form-label ">Precio</label><br>
+      <input type="text" {{readonly}} name="precio" value="{{precio}}" maxlength="45"
+        placeholder="Descripcion" class="form-control text-center" />
 
     </section>
     {{if ~show_action}}
     <br>
-    <section>
-      <label for="image">Imagen</label><br>
-      <input type="file" name="image" id="image">
+    <section class="mb-3">
+      <label for="image" class="form-label">Imagen</label><br>
+      <input type="file" name="image" id="image" class="form-control">
 
     </section>
     {{endif ~show_action}}
+
     {{if generos}}
-      <label for="genero">Genero</label><br>
-      <select name="genero" id="">
-    {{foreach generos}}       
+    <label for="genero" class="form-label">Genero</label><br>
+    <select name="genero" id="" class="form-select">
+      {{foreach generos}}
       <option value="{{id}}">{{genero}}</option>
-    {{endfor generos}}
-      </select>
-{{endif generos}}
+      {{endfor generos}}
+    </select>
+    {{endif generos}}
     {{if hasErrors}}
-    <section>
-      <ul>
+    <section class="mb-3">
+      <ul class="list-group">
         {{foreach aErrors}}
-        <li>{{this}}</li>
+        <li class="list-group-item">{{this}}</li>
         {{endfor aErrors}}
       </ul>
     </section>
     {{endif hasErrors}}
     <br>
-    <section>
+    <section class="mb-3">
       {{if ~show_action}}
-      <button type="submit" name="btnGuardar" value="G">Guardar</button>&nbsp;
+      <button type="submit" name="btnGuardar" value="G" class="btn btn-primary">Guardar</button>
       {{endif ~show_action}}
-      <button type="button" id="btnCancelar">Cancelar</button>
-    </section>
-  </form>
-</section>
+      <button type="button" id="btnCancelar" class="btn btn-outline-dark">Cancelar</button>
 
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById("btnCancelar").addEventListener("click", function (e) {
-      e.preventDefault();
-      e.stopPropagation();
-      window.location.assign("index.php?page=mnt_juegos");
-    });
-  });
-</script>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          document.getElementById("btnCancelar").addEventListener("click", function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            window.location.assign("index.php?page=mnt_juegos");
+          });
+        });
+
+
+      </script>

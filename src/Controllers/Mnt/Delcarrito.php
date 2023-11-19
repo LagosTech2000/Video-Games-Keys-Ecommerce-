@@ -11,12 +11,12 @@ class Delcarrito extends PublicController{
     public function run() : void
     {
         
-        $idCarrito=$_GET['id'];
-        \Dao\Mnt\Carrito::delCarrito($idCarrito);
-
+        $idJuego=$_GET['id'];
+        
         $userId = \Utilities\Security::getUserId();
         $userName = \utilities\Security::getUser()['userName'];
-
+        \Dao\Mnt\Carrito::delCarrito($idJuego,$userId);
+        $cantidad=0; 
         
         $carrito = \Dao\Mnt\Carrito::getCarrito($userId);
         $viewData = array(
@@ -29,17 +29,17 @@ class Delcarrito extends PublicController{
 
         foreach($carrito as $C){
             $C['imagen64'] = "data:image/jpg;base64," . base64_encode($C['imagen']);          
-            $viewData["carrito"][] = $C;
-            $viewData["totalP"] +=$C['precio'];
+            $C["totalP"] =$C['precio'] * $C['cantidad'];            
+            $cantidad += $C['cantidad'];
+            $viewData["carrito"][] = $C;    
         } 
+
 
         if(count($carrito)==0){
             $viewData['vacio']=true;
-            
       }else{
-          $viewData['cuenta']=count($carrito);
+          $viewData['cuenta']=$cantidad;
           $viewData['novacio']=true;
-          
       }
 
         Renderer::render("mnt/carrito", $viewData);

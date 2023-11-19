@@ -25,9 +25,9 @@ class Carrito extends PublicController{
 
         foreach($carrito as $C){
             $C['imagen64'] = "data:image/jpg;base64," . base64_encode($C['imagen']);          
-            $viewData["carrito"][] = $C;    
-            $viewData["totalP"] +=$C['precio'] * $C['cantidad'];            
+            $C["totalP"] =$C['precio'] * $C['cantidad'];            
             $cantidad += $C['cantidad'];
+            $viewData["carrito"][] = $C;    
         } 
 
 

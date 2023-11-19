@@ -34,17 +34,15 @@
 			{{foreach carrito}}
 			<div class="col-md-4">
 				<div class="card mb-4 shadow-sm">
-					<div class="card-img-top"
-						style="background-size: cover ;width:9cm;height:7cm;background-repeat: no-repeat; background-image: url('{{imagen64}}');">
-					</div>
+					<div class="card-img-top" style="background-size: cover; background-repeat: no-repeat; background-image: url('{{imagen64}}'); height: 7cm;"></div>
 					<div class="card-body">
 						<h4 class="card-title">{{nombre}} </h4>
 						<h4 class="card-title">x{{cantidad}} </h4>
-						<h5 class="card-text">$ {{precio}}</h5>
+						<h5 class="card-text">$ {{totalP}}</h5>
 						<h5 class="card-text">{{publisher}}</h5>
-						<h5 class="card-text">Genero: {{genero}}</h5>
+						<h5 class="card-text">{{genero}}</h5>
 
-						<a style="text-decoration: none;" href="index.php?page=mnt_Delcarrito&id={{idCarrito}}">
+						<a style="text-decoration: none;" href="index.php?page=mnt_Delcarrito&id={{idJuego}}">
 							<div class="text-dark fw-bold fs-5 card-img-top"
 								style="background-size: cover ;width:1cm;height:1cm;background-repeat: no-repeat; background-image: url('public/imgs/Caratulas/shopping-cart_icon-icons.com_72552.png'););">
 								-</div>

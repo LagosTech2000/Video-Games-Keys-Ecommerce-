@@ -1,4 +1,5 @@
 <?php
+
 /**
  * PHP Version 7.2
  *
@@ -9,6 +10,7 @@
  * @version  CVS:1.0.0
  * @link     http://
  */
+
 namespace Controllers;
 
 /**
@@ -27,22 +29,32 @@ class Index extends PublicController
      *
      * @return void
      */
-    public function run() :void
+    public function run(): void
     {
         $viewData = array();
 
-        $Juegos = \Dao\Mnt\Juegos::getAllGames();
+        if (isset($_POST['genero'])) {
+
+            $Juegos = \Dao\Mnt\Juegos::getByGenero($_POST['genero']);        
+
+        } else {
+
+            $Juegos = \Dao\Mnt\Juegos::getAllGames();
+        }
+
+        $viewData['generos'] = \Dao\Mnt\Juegos::getGeneros();
 
         $viewData["Juegos"] = array();
-        
-        foreach($Juegos as $J){
-            $J['imagen'] = "data:image/jpg;base64," . base64_encode($J['imagen']);          
-            $viewData["Juegos"][] = $J;
-        }  
 
-        $viewData['logged']=\Utilities\Security::isLogged();
-        
+        foreach ($Juegos as $J) {
+
+            $J['imagen'] = "data:image/jpg;base64," . base64_encode($J['imagen']);
+            $viewData["Juegos"][] = $J;
+
+        }
+
+        $viewData['logged'] = \Utilities\Security::isLogged();
+
         \Views\Renderer::render("index", $viewData);
     }
 }
-?>

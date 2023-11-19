@@ -734,7 +734,7 @@
 }
 
 .modalBackground {
-    background-color: #2a3322
+    background-color: #74b0fb
 }
 
 .modalBackground .modal {
@@ -742,19 +742,19 @@
 }
 
 .depth-0 {
-    box-shadow: 0px 0px 3px #2a3322
+    box-shadow: 0px 0px 3px #74b0fb
 }
 
 .depth-1 {
-    box-shadow: 1px 1px 3px #2a3322
+    box-shadow: 1px 1px 3px #74b0fb
 }
 
 .depth-2 {
-    box-shadow: 3px 3px 5px #2a3322
+    box-shadow: 3px 3px 5px #74b0fb
 }
 
 .depth-3 {
-    box-shadow: 3px 3px 7px #2a3322
+    box-shadow: 3px 3px 7px #74b0fb
 }
 
 .py-0 {
@@ -918,7 +918,7 @@ header {
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    background-color: #2a3322;
+    background-color: #74b0fb;
     color: white;
     padding: 0px;
     flex-wrap: wrap;
@@ -939,7 +939,7 @@ main {
 }
 
 footer {
-    background-color: #2a3322;
+    background-color: #74b0fb;
     color: white;
     display: flex;
     justify-content: center;
@@ -977,7 +977,7 @@ header nav {
     bottom: 0px;
     height: calc(100% - 51px);
     transform: translateX(-100vw);
-    background-color: #2a3322;
+    background-color: #74b0fb;
     transition: transform 250ms ease-in-out;
     z-index: 1000
 }
@@ -1004,7 +1004,7 @@ header ul li span {
 }
 
 header ul li a:hover {
-    background-color: #2a3322;
+    background-color: #74b0fb;
     transition: background-color .5s ease
 }
 
@@ -1081,7 +1081,7 @@ textarea,
 select {
     font-size: 1rem;
     padding: .75rem .5rem;
-    border: 1px solid #2a3322;
+    border: 1px solid #74b0fb;
     outline-style: none;
     margin: 0px
 }
@@ -1101,9 +1101,9 @@ input.width-full {
 }
 
 button {
-    background-color: #2a3322;
+    background-color: #74b0fb;
     color: white;
-    border: solid 2px #2a3322;
+    border: solid 2px #74b0fb;
     padding: 0.75rem;
     font-size: 1rem;
     font-weight: 700;
@@ -1123,7 +1123,7 @@ a.btn {
 
 button:hover {
     background-color: var();
-    box-shadow: 1px 1px 3px #2a3322
+    box-shadow: 1px 1px 3px #74b0fb
 }
 
 button.primary {
@@ -1153,7 +1153,7 @@ table a.btn {
     width: 2rem;
     height: 2rem;
     border-radius: 50%;
-    border: 1px solid #2a3322;
+    border: 1px solid #74b0fb;
     background-color: #99aeb8;
     color: white;
     text-decoration: none;
@@ -1161,7 +1161,7 @@ table a.btn {
 }
 
 table a.btn:hover {
-    background-color: #2a3322
+    background-color: #74b0fb
 }
 
 .WWList table {
@@ -1172,14 +1172,14 @@ table a.btn:hover {
 }
 
 .WWList table thead {
-    background-color: #2a3322;
+    background-color: #74b0fb;
     color: white
 }
 
 .WWList table tbody tr:hover {
     outline-width: 1px;
     outline-style: solid;
-    outline-color: #2a3322;
+    outline-color: #74b0fb;
     outline-offset: -1px
 }
 
@@ -1198,7 +1198,7 @@ table a.btn:hover {
     display: flex;
     width: 100vw;
     height: 90vh;
-    background-color: #2a3322;
+    background-color: #74b0fb;
     color: white;
     position: relative
 }
@@ -1225,7 +1225,7 @@ table a.btn:hover {
     justify-content: center;
     align-items: center;
     padding: 2rem;
-    background-color: #2a3322;
+    background-color: #74b0fb;
     color: white;
     width: 100%
 }

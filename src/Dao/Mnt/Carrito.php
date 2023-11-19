@@ -7,7 +7,7 @@ use mysqli;
 class Carrito extends Table{
  
     public static function getCarrito(int $id){
-        $sqlstr = "SELECT * , carrito.id as idCarrito from carrito inner join juegos on juegos.id = carrito.juegos_id inner join genero on genero.id = juegos.genero_id where usercod = :id;";
+        $sqlstr = "SELECT * , juegos.id as idJuego from carrito inner join juegos on juegos.id = carrito.juegos_id inner join genero on genero.id = juegos.genero_id where usercod = :id;";
 
         $row = self::obtenerRegistros(
             $sqlstr,
@@ -18,7 +18,7 @@ class Carrito extends Table{
         return $row;
     }
 
-    public static function addCarrito(int $id_juego,$usercod){
+    public static function addCarrito(int $id_juego,int $usercod){
 
             $carrito=\Dao\Mnt\Carrito::getCarrito($usercod);
             $cantidad=1;
@@ -29,9 +29,7 @@ class Carrito extends Table{
                        $cantidad = $c['cantidad'] + 1 ;
                 }
 
-            }
-
-            
+            }            
 
 
              if($cantidad==1){
@@ -56,14 +54,37 @@ class Carrito extends Table{
     
     }
 
-    public static function delCarrito(int $id){
+    public static function delCarrito(int $id_juego,int $usercod){
 
-        $sqlstr = "delete from carrito where id = :id";
+        $carrito=\Dao\Mnt\Carrito::getCarrito($usercod);
+        $cantidad=1;
 
-         self::executeNonQuery(
-            $sqlstr,
-            array('id'=>$id)
-        );
+        foreach($carrito as $c){
+            
+            if($c['juegos_id']==$id_juego){
+                   $cantidad = $c['cantidad'] ;
+            }
+
+        }            
+
+         if($cantidad==1){            
+             $sqlstr = "delete from carrito where usercod=:usercod and juegos_id = :id_juego;";
+             
+             self::executeNonQuery(
+                 $sqlstr,
+                 array('id_juego'=>$id_juego, 'usercod'=>$usercod)
+                );
+                
+            }else{
+                $cantidad = $c['cantidad'] -1;
+                $sqlstr = "update carrito set cantidad = (cantidad - 1 ) where usercod=:usercod and juegos_id = :id_juego;";
+             
+                self::executeNonQuery(
+                    $sqlstr,
+                    array('id_juego'=>$id_juego, 'usercod'=>$usercod)
+                   );
+
+            }
         
 
     }

@@ -18,8 +18,17 @@ class Addcarrito extends PublicController{
         \Dao\Mnt\Carrito::addCarrito($idJuego,$userId);
 
         $viewData = array();
+        $viewData['generos'] = \Dao\Mnt\Juegos::getGeneros();
 
-        $Juegos = \Dao\Mnt\Juegos::getAllGames();
+
+        if (isset($_POST['genero'])) {
+
+            $Juegos = \Dao\Mnt\Juegos::getByGenero($_POST['genero']);        
+
+        } else {
+
+            $Juegos = \Dao\Mnt\Juegos::getAllGames();
+        }
 
         $viewData["Juegos"] = array();
         

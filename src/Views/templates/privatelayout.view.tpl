@@ -41,7 +41,7 @@
     </a>
 
     <nav id="menu">
-      <ul>
+      <ul class="fs-2">
         <li><a href="index.php"><i class="fas fa-user-plus"></i>&nbsp;Inicio</a></li>
         <li><a href="index.php?page=admin_admin"><i class="fas fa-home"></i>&nbsp;Admin</a></li>
         {{foreach NAVIGATION}}

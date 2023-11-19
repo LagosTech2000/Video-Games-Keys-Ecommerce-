@@ -70,13 +70,27 @@ class Juegos extends Table{
         );
         return $row;
     }
+    
     public static function getGeneros(){
-        $sqlstr = "SELECT * from genero;";
+        $sqlstr = "SELECT * from genero order by id ;";
         $row = self::obtenerRegistros(
             $sqlstr,
             array()
         );
         return $row;
+    }
+
+    public static function getByGenero($genero){
+
+        $sqlstr = "SELECT * ,juegos.id as idJuego from juegos inner join genero on genero.id = juegos.genero_id  where genero= :genero;";
+        $row = self::obtenerRegistros(
+            $sqlstr,
+            array(
+                "genero"=> $genero
+            )
+        );        
+        return $row;
+
     }
 
 }
